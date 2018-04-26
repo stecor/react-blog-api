@@ -6,10 +6,11 @@ import { BrowserRouter, Route } from 'react-router-dom';
 import reducers from './reducers';
 import './style/index.css';
 import PostsIndex from './components/posts_index';
+import promise from 'redux-promise';
 
 import registerServiceWorker from './registerServiceWorker';
 
-const createStoreWithMiddleWare = applyMiddleware()(createStore);
+const createStoreWithMiddleWare = applyMiddleware(promise)(createStore);
 
 ReactDOM.render(
   <Provider store={createStoreWithMiddleWare(reducers)}>

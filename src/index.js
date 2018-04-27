@@ -7,6 +7,7 @@ import reducers from './reducers';
 import './style/index.css';
 import PostsIndex from './components/posts_index';
 import promise from 'redux-promise';
+import PostsNew from './components/posts_new';
 
 import registerServiceWorker from './registerServiceWorker';
 
@@ -16,7 +17,8 @@ ReactDOM.render(
   <Provider store={createStoreWithMiddleWare(reducers)}>
     <BrowserRouter>
       <div>
-        <Route path="/" component={PostsIndex}/>
+        <Route exact path="/" component={PostsIndex}/>
+        <Route path="/posts/new" component={PostsNew}/>
       </div>
     </BrowserRouter>
   </Provider>

@@ -25,7 +25,7 @@ class PostsNew extends Component{
   onSubmit(values){
 
     this.props.createPost(values, () =>{
-      this.props.history.push('/');
+      this.props.history.push({process.env.PUBLIC_URL + "/"});
     });
   }
 

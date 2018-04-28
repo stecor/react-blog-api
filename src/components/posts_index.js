@@ -14,7 +14,7 @@ class PostsIndex extends Component {
    return  _.map(this.props.posts, post =>{
      return(
        <li className="list-group-item" key={post.id}>
-       <Link to={`/posts/${post.id}`}>{post.title}</Link>
+       <Link to={process.env.PUBLIC_URL +`/posts/${post.id}`}>{post.title}</Link>
        </li>
      );
    });
@@ -24,7 +24,7 @@ class PostsIndex extends Component {
     return(
       <div>
         <div className="text-xs-right">
-          <Link className="btn btn-primary" to="/posts/new">
+          <Link className="btn btn-primary" to={process.env.PUBLIC_URL +"/posts/new"}>
             Add a Post
           </Link>
         </div>

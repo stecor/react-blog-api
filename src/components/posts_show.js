@@ -29,7 +29,7 @@ class PostsShow extends Component {
     return(
       <div>
         <div className="text-xs-right">
-          <Link to="/" className="btn btn-primary">back to index</Link>
+          <Link to={process.env.PUBLIC_URL +"/"} className="btn btn-primary">back to index</Link>
           <button className="btn btn-danger pull-xs-right" onClick={this.onDeleteClick.bind(this)}>Delete Post</button>
         </div>
         <h3>{post.title}</h3>

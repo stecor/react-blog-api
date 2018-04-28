@@ -19,9 +19,9 @@ ReactDOM.render(
     <BrowserRouter>
       <div>
         <Switch>
-          <Route path="/posts/new" component={PostsNew}/>
-          <Route path="/posts/:id" component={PostsShow}/>
-          <Route path="/" component={PostsIndex}/>
+          <Route path={process.env.PUBLIC_URL + "/posts/new"} component={PostsNew}/>
+          <Route path={process.env.PUBLIC_URL + "/posts/:id"} component={PostsShow}/>
+          <Route path={process.env.PUBLIC_URL + "/"}          component={PostsIndex}/>
         </Switch>
       </div>
     </BrowserRouter>
